@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" class="contain">
+        <div class="menu">
+            <button class="bubbly-button" id="home" onclick="home()">HOME</button>
+            <button class="bubbly-button" id="about" onclick="aboutPag()">ABOUT</button>
+            <button class="bubbly-button" id="projects">PROJECTS</button>
+            <button class="bubbly-button" id="contact">CONTACT</button>
+        </div>
+        <div class="box">
+            <img class="proj" src="http://examples.javacodegeeks.com/wp-content/uploads/2017/05/jsf.project.demo_.6.jpg" alt="">
+            <p>Java Backend</p>
+            <p>Java</p>
+            <a href="https://github.com/usmanali598/SalaryDB" target="_blank">
+                <img class="github" src="https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg"
+                    alt="">
+            </a>
+        </div>
+
+        <div class="box">
+            <img class="proj" src="http://www.vectordiary.com/special-effects/008-notice-board/notice-board-background.jpg" alt="">
+            <p>Notes Board</p>
+            <p>React js</p>
+            <a href="https://github.com/usmanali598/NotesOnBoard" target="_blank">
+                <img class="github" src="https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg"
+                    alt="">
+            </a>
+        </div>
+
+        <div class="box">
+            <img class="proj" src="https://media.wired.com/photos/5954a1b05578bd7594c46869/master/w_1600,c_limit/reddit-alien-red-st.jpg"
+                alt="">
+            <p>Reddit Api</p>
+            <p>React, Redux</p>
+            <a href="https://github.com/usmanali598/ReduxFetchRedditApi" target="_blank">
+                <img class="github" src="https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg"
+                    alt="">
+            </a>
+        </div>
+        <div class="box">
+            <img class="proj" src="https://i0.wp.com/guestspy.com/wp-content/uploads/2018/03/Top-10-Best-Mobile-Location-Tracker-900x480.png"
+                alt="">
+            <p>Android Tracking Application</p>
+            <p>Android Java</p>
+            <a href="https://github.com/usmanali598/AndroidAppCarTracking" target="_blank">
+                <img class="github" src="https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg"
+                    alt="">
+            </a>
+        </div>
+    </div>
+    <!-- <script src="animation.js"></script> -->
+    <script>
+        var animateButton = function ( e )
+        {
+
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove( 'animate' );
+
+            e.target.classList.add( 'animate' );
+            setTimeout( function ()
+            {
+                e.target.classList.remove( 'animate' );
+            }, 700 );
+        };
+
+        var bubblyButtons = document.getElementsByClassName( "bubbly-button" );
+
+        for ( var i = 0; i < bubblyButtons.length; i++ )
+        {
+            bubblyButtons[ i ].addEventListener( 'click', animateButton, false );
+        }
+        function aboutPag()
+        {
+            setTimeout( function ()
+            {
+                window.location.href = '../aboutPage/about.html'
+            }, 500 )
+        }
+
+    </script>
+    <script src="../javascript.js"></script>
+</body>
+
+</html>

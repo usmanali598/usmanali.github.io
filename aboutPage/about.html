@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" class="contain">
+        <div class="menu">
+            <button class="bubbly-button" id="home" onclick="home()">HOME</button>
+            <button class="bubbly-button" id="about" onclick="">ABOUT</button>
+            <button class="bubbly-button" id="projects" onclick="project()">PROJECTS</button>
+            <button class="bubbly-button" id="contact">CONTACT</button>
+        </div>
+        <h1>Me & My Interests</h1>
+        <div class="box">
+            <img class="imga" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/TS-Night-Photography.jpg?itok=VO6dxBNS"
+                alt="">
+            <p>Photography</p>
+            <p>I love Photography and I have a DSLR Camera with 2 lenses - with Photoshop knowledge for more fun with images</p>
+
+        </div>
+
+        <div class="box">
+            <img class="imga" src="http://2.bp.blogspot.com/-_6TJoTVvc7g/UV68TcQCgWI/AAAAAAAABHA/rBPxmObZod8/s1600/Personal-Development.jpg"
+                alt="">
+            <p>Self Development</p>
+            <p>I beleive that everyday we can learn something and Improve ourselves for healthy and happy life</p>
+
+        </div>
+
+        <div class="box">
+            <img class="imga" src="https://www.moroccoworldnews.com/wp-content/uploads/2015/04/Personal-Development-A-Journey-within-the-Inner-Self.jpg"
+                alt="">
+            <p>Can do attitude (Want to do more)</p>
+            <p>Everything is possible but it needs effort, time and power & I acheived everything through hardwoking else than
+                luck</p>
+
+        </div>
+        <div class="box">
+            <img class="imga" src="https://www.miningreview.com/wp-content/uploads/2018/04/education.jpg" alt="">
+            <p>Education (Eager to learn More)</p>
+            <p>Acheived higher education in 2 different continents & having 2 bachelors and 1 Master degree</p>
+        </div>
+    </div>
+    <!-- <script src="animation.js"></script> -->
+    <script>
+        var animateButton = function ( e )
+        {
+
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove( 'animate' );
+
+            e.target.classList.add( 'animate' );
+            setTimeout( function ()
+            {
+                e.target.classList.remove( 'animate' );
+            }, 700 );
+        };
+
+        var bubblyButtons = document.getElementsByClassName( "bubbly-button" );
+
+        for ( var i = 0; i < bubblyButtons.length; i++ )
+        {
+            bubblyButtons[ i ].addEventListener( 'click', animateButton, false );
+        }
+
+        function project()
+        {
+            setTimeout( function ()
+            {
+                window.location.href = '../projects/projects.html'
+            }, 500 )
+        }
+    </script>
+    <script src="../javascript.js"></script>
+</body>
+
+</html>
